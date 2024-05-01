@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+*{
+  font-family: "Didact Gothic", sans-serif;
+}
+
+
+.control-arrow{
+  height: 400px;
+}
