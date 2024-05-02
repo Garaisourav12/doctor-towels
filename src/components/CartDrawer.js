@@ -46,7 +46,7 @@ const CartDrawer = ({ visible, setVisible }) => {
                         <IoMdClose className="text-2xl" />
                     </button>
                 </div>
-                <div className="py-4 px-4 flex flex-col gap-4">
+                <div className="flex-1 py-4 px-4 flex flex-col gap-4 overflow-y-auto h-[80vh]">
                     {cartArray.length === 0 && (
                         <p className="text-center text-2xl font-bold py-20">
                             Cart is empty
@@ -61,20 +61,20 @@ const CartDrawer = ({ visible, setVisible }) => {
                             />
                         );
                     })}
-                    {cartArray.length > 0 && (
-                        <div className="flex justify-between items-center px-4 py-2 border-t border-gray-300">
-                            <p className="font-semibold">
-                                Total: Rs. {totalPrice}.00
-                            </p>
-                            <button
-                                className="px-4 py-2 transition-all duration-300 rounded-sm border border-gray-700 hover:bg-gray-700 hover:text-white"
-                                onClick={handleCheckout}
-                            >
-                                Checkout
-                            </button>
-                        </div>
-                    )}
                 </div>
+                {cartArray.length > 0 && (
+                    <div className="flex justify-between items-center px-4 py-2 border-t border-gray-300">
+                        <p className="font-semibold">
+                            Total: Rs. {totalPrice}.00
+                        </p>
+                        <button
+                            className="px-4 py-2 transition-all duration-300 rounded-sm border border-gray-700 hover:bg-gray-700 hover:text-white"
+                            onClick={handleCheckout}
+                        >
+                            Checkout
+                        </button>
+                    </div>
+                )}
             </Drawer>
         </div>
     );
