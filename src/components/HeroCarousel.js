@@ -15,22 +15,22 @@ const HeroCarousel = () => {
             cycleNavigation={true}
         >
             <div>
-                <div className="h-[200px] md:h-[400px] object-cover object-center">
+                <div className="h-[130px] sm:h-[200px] md:h-[400px] object-cover object-center">
                     <img className="w-full" src={s1} alt="" />
                 </div>
             </div>
             <div>
-                <div className="h-[200px] md:h-[400px] object-cover object-center">
+                <div className="h-[130px] sm:h-[200px] md:h-[400px] object-cover object-center">
                     <img className="w-full" src={s2} alt="" />
                 </div>
             </div>
             <div>
-                <div className="h-[200px] md:h-[400px] object-cover object-center">
+                <div className="h-[130px] sm:h-[200px] md:h-[400px] object-cover object-center">
                     <img className="w-full" src={s3} alt="" />
                 </div>
             </div>
             <div>
-                <div className="h-[200px] md:h-[400px] object-cover object-center">
+                <div className="h-[130px] sm:h-[200px] md:h-[400px] object-cover object-center">
                     <img className="w-full" src={s4} alt="" />
                 </div>
             </div>

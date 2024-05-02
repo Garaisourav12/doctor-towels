@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import p1 from '../assets/product1.jpg'
+import p2 from '../assets/product2.jpg'
+import p3 from '../assets/product3.jpg'
+import cartContext from "../context/cartContext";
 
-function Product({ img, name, price, id }) {
+function Product({ name, price, id, setVisible }) {
     const navigate = useNavigate();
+    const images = [p1, p2, p3];
+    const [img, setImg] = React.useState(0);
+    const { addToCart } = useContext(cartContext);
 
-    const addToCart = (event) => {
+    const handleAddToCart = (event) => {
         event.preventDefault();
-        // Logic for add to cart here
-
-        navigate("/mycart");
+        addToCart(id+'', 1);
+        setVisible(true);
     };
+
     return (
         <div>
             <Link
@@ -17,7 +24,7 @@ function Product({ img, name, price, id }) {
                 className="flex flex-col items-start"
             >
                 <div className="w-full mb-2 relative">
-                    <img src={img} className="w-full" alt="" />
+                    <img src={images[img]} className="w-full" alt="" />
                 </div>
                 <p className="text-gray-600">{name}</p>
                 <div className="flex gap-2">
@@ -28,22 +35,22 @@ function Product({ img, name, price, id }) {
                 </div>
 
                 <div
-                    class="product-block-options product-block-options--swatch"
+                    className="product-block-options product-block-options--swatch"
                     data-option-name="Shades of Doctor Towels"
                 >
-                    <div class="flex gap-2 items-center mt-2">
-                        <span class="bg-yellow-600 h-6 w-6 rounded-full inline-block border border-gray-800"></span>
-                        <span class="bg-indigo-500 h-6 w-6 rounded-full inline-block"></span>
-                        <span class="bg-green-400 h-6 w-6 rounded-full inline-block"></span>
-                        <span class="bg-orange-500 h-6 w-6 rounded-full inline-block"></span>
-                        <span class="product-block-options__more-label">
+                    <div className="flex gap-3 items-center mt-2">
+                        <span className="bg-yellow-600 h-3 w-3 rounded-full inline-block"></span>
+                        <span className="bg-indigo-500 h-3 w-3 rounded-full inline-block"></span>
+                        <span className="bg-green-400 h-3 w-3 rounded-full inline-block"></span>
+                        <span className="bg-orange-500 h-3 w-3 rounded-full inline-block"></span>
+                        <span className="text-gray-600 text-sm">
                             + 1 more
                         </span>
                     </div>
                 </div>
 
                 <button
-                    onClick={addToCart}
+                    onClick={handleAddToCart}
                     className="bg-white text-gray-600 px-10 py-3 mt-4 rounded-sm border border-gray-600"
                 >
                     ADD TO CART

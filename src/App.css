@@ -8,3 +8,7 @@
 .control-arrow{
   height: 400px;
 }
+
+.active{
+  color: #b61d0f;
+}

@@ -1,0 +1,4 @@
+
+.product-data::-webkit-scrollbar{
+    display: none;
+}

@@ -7,11 +7,11 @@ import gym from '../assets/gym.jpg';
 
 function ShopByProduct() {
     return (
-        <section className="px-6 md:px-16 my-16">
+        <section className="px-4 md:px-16 my-16">
             <h2 className="text-3xl text-center font-[900] text-[#171717]">
                 Shop By Product
             </h2>
-            <p className="mt-4 text-[1.3rem] text-center font-[900] text-[#5c5c5c]">
+            <p className="mt-4 text-1xl md:text-[1.3rem] text-center font-[900] text-[#5c5c5c]">
                 Redefining the skincare game for over 10 lakh + Customers &
                 Counting
             </p>
