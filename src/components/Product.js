@@ -21,7 +21,7 @@ function Product({ name, price, id, setVisible }) {
         <div>
             <Link
                 to={`/product_detail/${id}`}
-                className="flex flex-col items-start"
+                className="flex flex-col items-center md:items-start"
             >
                 <div className="w-full mb-2 relative">
                     <img src={images[img]} className="w-full" alt="" />
