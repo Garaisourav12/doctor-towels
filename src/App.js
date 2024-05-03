@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Cart from "./pages/Cart";
 import Category from "./pages/Category";
 import ProductDetail from "./pages/ProductDetail";
@@ -12,8 +12,14 @@ import CartDrawer from "./components/CartDrawer";
 import NavDrawer from "./components/NavDrawer";
 
 function App() {
+    const location = useLocation();
     const [visible, setVisible] = useState(false);
     const [visible2, setVisible2] = useState(false);
+
+    // Scroll top when location change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location])
 
     return (
         <div className="w-full min-h-screen bg-white">

@@ -30,30 +30,48 @@ function NavBar({ setVisible, setVisible2 }) {
                         alt=""
                     />
                 </Link>
-                <Link to="/mycart" className="flex gap-1">
+                <button onClick={() => setVisible(true)} className="flex gap-1">
                     <span className="hidden md:block font-thin text-[.9rem]">
                         Cart
                     </span>
                     <BsCart3 className="text-[1.5rem]" />
-                </Link>
+                </button>
             </div>
             <div className="hidden md:flex flex-wrap justify-center items-center gap-x-8 font-bold px-2 md:px-8 border-t border-gray-300">
-                <HoverNavLink to="/" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Home
                 </HoverNavLink>
-                <HoverNavLink to="/towels" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/towels"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Towels
                 </HoverNavLink>
-                <HoverNavLink to="/shop_by_material" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/shop_by_material"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Shop By Material
                 </HoverNavLink>
-                <HoverNavLink to="/thirsty_towel" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/thirsty_towel"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Thirsty Towel
                 </HoverNavLink>
-                <HoverNavLink to="/combo" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/combo"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Combo
                 </HoverNavLink>
-                <HoverNavLink to="/gifting" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/gifting"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Gifting
                 </HoverNavLink>
                 <HoverNavLink
@@ -62,7 +80,10 @@ function NavBar({ setVisible, setVisible2 }) {
                 >
                     Summer Store
                 </HoverNavLink>
-                <HoverNavLink to="/blogs" className="py-4 relative hover:text-[#b61d0f]">
+                <HoverNavLink
+                    to="/blogs"
+                    className="py-4 relative hover:text-[#b61d0f]"
+                >
                     Blogs
                 </HoverNavLink>
             </div>
