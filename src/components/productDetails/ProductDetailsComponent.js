@@ -40,7 +40,7 @@ function ProductDetailComponent({ setVisible, id }) {
     };
 
     return (
-        <section className="px-28 py-2 flex flex-col md:flex-row gap-6">
+        <section className="px-4 md:px-28 py-2 flex flex-col md:flex-row gap-6">
             <div className="flex flex-col gap-1">
                 <div className="flex">
                     <img className="max-w-full w-[150rem]" src={img} alt="" />
@@ -63,7 +63,7 @@ function ProductDetailComponent({ setVisible, id }) {
                 </div>
             </div>
 
-            <div className="product-data h-[130vh] overflow-y-auto">
+            <div className="product-data md:h-[130vh] md:overflow-y-auto">
                 <div className="info mt-4 font-bold">
                     <h1 className="text-2xl">Banana X Cotton Hand Towel</h1>
                     <p className="flex gap-4 my-2 align-items-center">
